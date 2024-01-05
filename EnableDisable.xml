@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<parameter name="appUrl"
+		value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" />
+	<parameter name="user" value="Admin" />
+	<parameter name="pass" value="admin123" />
+	<test name="OrangeHRMLogin" enabled="true">
+		<parameter name="browserName" value="Edge" />
+		<classes>
+			<class name="session10.OrangeHRMParameters">
+				<methods>
+					<include name="launchApp" />
+					<include name="enterLoginDetails" />
+					<include name="verifyLogin" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="OrangeHRMMyInfo">
+		<parameter name="browserName" value="firefox" />
+		<classes>
+			<class name="session10.OrangeHRMParameters">
+				<methods>
+					<include name="launchApp" />
+					<include name="enterLoginDetails" />
+					<include name="navigateToMyInfo" />
+					<include name="verifyMyInfo" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="testGoogle" enabled="false">
+		<parameter name="browserName" value="firefox" />
+		<classes>
+			<class name="com.smart.extent.TestClass">
+				<methods>
+					<include name="googleTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>  

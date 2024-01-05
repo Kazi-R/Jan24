@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ListenerTest">
+	<listeners>
+		<listener class-name="com.smart.listeners.ITestListenerImplementationClass"/>
+	</listeners>
+
+	<test name="Test_1">
+		<classes>
+			<class name="com.smart.listeners.TestClass1">
+				<methods>
+					<include name="testMethod1" />
+					<include name="testMethod2" />
+					<include name="testMethod6" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Test_2">
+		<classes>
+			<class name="com.smart.listeners.TestClass1">
+				<methods>
+					<include name="testMethod3" />
+					<include name="testMethod4" />
+					<include name="testMethod7" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
